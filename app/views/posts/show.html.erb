@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @post.class_id %>
+</p>
+
+<p>
+  <strong>Instructor:</strong>
+  <%= @post.instructor %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @post.comment %>
+</p>
+
+<p>
+  <strong>Semester:</strong>
+  <%= @post.semester %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @post.year %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

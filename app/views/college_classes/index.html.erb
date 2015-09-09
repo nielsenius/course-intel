@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing College Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Department</th>
+      <th>Number</th>
+      <th>Units</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @college_classes.each do |college_class| %>
+      <tr>
+        <td><%= college_class.name %></td>
+        <td><%= college_class.department %></td>
+        <td><%= college_class.number %></td>
+        <td><%= college_class.units %></td>
+        <td><%= link_to 'Show', college_class %></td>
+        <td><%= link_to 'Edit', edit_college_class_path(college_class) %></td>
+        <td><%= link_to 'Destroy', college_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New College class', new_college_class_path %>

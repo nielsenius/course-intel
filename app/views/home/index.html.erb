@@ -1,0 +1,8 @@
+<%= form_tag '/home/submit_search' do %>
+    <%=label_tag 'Course Number' %>
+    <%=text_field_tag 'number'%>
+
+    <div><%= submit_tag 'Save' %></div>
+<% end -%>
+
+<%= link_to "Add New Post", new_post_path %>
