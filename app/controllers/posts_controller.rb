@@ -25,9 +25,11 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-    @post.save
-    redirect_to home_index_url
-    
+    if(@post.save)
+      redirect_to home_index_url
+    else
+      render :action=>'new'
+    end
   end
 
   # PATCH/PUT /posts/1
@@ -62,6 +64,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:college_class_id, :instructor, :comment, :semester, :year)
+      params.require(:post).permit(:course_number, :instructor, :comment, :semester, :year)
     end
 end
