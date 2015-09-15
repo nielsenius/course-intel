@@ -1,0 +1,3 @@
+[submodule "lib/course-api"]
+	path = lib/course-api
+	url = https://github.com/ScottyLabs/course-api.git
