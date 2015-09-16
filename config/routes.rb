@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :college_classes
   resources :users
+  resources :sessions
   
   get 'login', to: 'sessions#new', as: :login
   get 'logout', to: 'sessions#destroy', as: :logout
