@@ -1,26 +1,26 @@
 <%= simple_form_for(@post) do |f| %>
 
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-12">
     <%= f.input :course_number, placeholder: 'i.e. 67475' %>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-12">
     <%= f.input :instructor, placeholder: 'i.e. Heimann' %>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-1">
+  <div class="col-md-6">
     <%= f.input :semester, as: :radio_buttons,
     collection: ['Fall', 'Spring', 'Summer'] %>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-6">
     <%= f.input :year, :collection => (2000..2015).to_a.reverse %>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-12">
     <%= f.input :comment, placeholder: 'Tell us about your experience in this course' %>
   </div>
 </div>

@@ -10,11 +10,13 @@ class CollegeClassesController < ApplicationController
   # GET /college_classes/1
   # GET /college_classes/1.json
   def show
+    @post = Post.new
   end
 
   # GET /college_classes/new
   def new
     @college_class = CollegeClass.new
+    @post = Post.new
   end
 
   # GET /college_classes/1/edit
