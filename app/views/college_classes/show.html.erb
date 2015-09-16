@@ -1,24 +1,27 @@
-<p id="notice"><%= notice %></p>
+<%= render '/home/home' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @college_class.name %>
-</p>
+<div id="content">
+	<h2>
+	  <%= @college_class.course_number %> <%= @college_class.name %>
+	</h2>
 
-<p>
-  <strong>Department:</strong>
-  <%= @college_class.department %>
-</p>
+	<h4>
+	  <%= @college_class.department %> Department<br>
+	  <%= @college_class.units %> Units
+	</h4>
 
-<p>
-  <strong>Number:</strong>
-  <%= @college_class.course_number %>
-</p>
+	<div id="comments">
+		<%= render '/posts/comments' %>
+	</div>
 
-<p>
-  <strong>Units:</strong>
-  <%= @college_class.units %>
-</p>
+	<div id="newpost">
+		<%= link_to 'Tell us about your experience!', new_post_path, class: 'btn-default' %>
+	</div>
+	
+</div>
 
-<%= link_to 'Edit', edit_college_class_path(@college_class) %> |
-<%= link_to 'Back', college_classes_path %>
+
+
+
+<%#= link_to 'Edit', edit_college_class_path(@college_class) %> 
+<%#= link_to 'Back', college_classes_path %>
