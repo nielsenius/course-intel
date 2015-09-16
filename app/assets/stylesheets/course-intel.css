@@ -133,7 +133,7 @@ hr.small {
   }
 }
 .intro-header {
-  margin-top: 50px;
+  margin-top: 70px;
   background-color: #808080;
   background: no-repeat center center;
   background-attachment: scroll;
@@ -401,7 +401,7 @@ body {
   webkit-tap-highlight-color: #0085a1;
 }
 #logo {
-  padding-top: 12px;
+
 }
 .intro-header {
   background-image: url("cmu.jpg");
@@ -462,4 +462,13 @@ label {
 #newpost textarea#post_comment {
   font-family: 'Helvetica', sans-serif;
 }
-a.nohover:hover { color: none;  }
+#auth-button a.btn-default {
+  color: white;
+}
+#auth-button .btn-default {
+  background-color: #77c043;
+  border: 0px;
+}
+.container-fluid {
+  padding-top: 25px;
+}
