@@ -133,6 +133,7 @@ hr.small {
   }
 }
 .intro-header {
+  margin-top: 50px;
   background-color: #808080;
   background: no-repeat center center;
   background-attachment: scroll;
@@ -399,7 +400,12 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
-
+#logo {
+  padding-top: 12px;
+}
+.intro-header {
+  background-image: url("cmu.jpg");
+}
 #search {
   line-height: 47px;
   font-family: 'Helvetica', sans-serif;
