@@ -1,16 +1,19 @@
+<!-- Custom CSS -->
+<link href="/assets/stylesheets/course-intel.css" rel="stylesheet">
+
 <h3>Login</h3>
 
 <%= form_tag sessions_path do %>
 
 	<div class="control-group">
-    <%= label_tag :email %>
+      <%= label_tag :email %>
     <div class="controls">
       <%= text_field_tag :email, params[:email] %>
     </div>
   </div>
 
 	<div class="control-group">
-    <%= label_tag :password %>
+      <%= label_tag :password %>
     <div class="controls">
       <%= password_field_tag :password %>
     </div>

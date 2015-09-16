@@ -463,3 +463,7 @@ label {
   font-family: 'Helvetica', sans-serif;
 }
 a.nohover:hover { color: none;  }
+
+#new_user label, .control-group label {
+	color: black;
+}
