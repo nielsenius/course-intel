@@ -3,7 +3,7 @@
 <h4>What past students have to say:</h4>
 
 <ul>
-  <% @college_class.posts.each do |post| %>
+  <% @searched_class.posts.each do |post| %>
     <li>
       <%= post.comment %><br>
       <em>Semester: <%= post.semester %> <%= post.year %> &nbsp;&nbsp;&nbsp;Professor: <%= post.instructor %></em>

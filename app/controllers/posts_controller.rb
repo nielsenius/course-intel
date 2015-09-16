@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if(@post.save)
-      redirect_to @post.college_class
+      redirect_to :controller => 'home', :action => 'submit_search', :course_number => @post.course_number
     else
       render :action=>'new'
     end

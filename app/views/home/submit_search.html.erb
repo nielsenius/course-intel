@@ -1,23 +1,28 @@
-<%= form_tag '/home/submit_search' do %>
-    <%=label_tag 'Course Number' %>
-    <%=text_field_tag 'course_number'%>
+<%= render '/home/home' %>
 
-    <div><%= submit_tag 'Search' %></div>
-<% end -%>
+<div id="content">
+  <% if(@searched_class) %>
+	<h2>
+	  <%= @searched_class.course_number %> <%= @searched_class.name %>
+	</h2>
 
-<table style = margin-top:w%;>
- <% if(@searched_class && @searched_class.posts.length > 0) %>
-   <% @searched_class.posts.each do |post| %>
-   	  <tr>
- 	    <td> <%= post.comment %> </td>
- 	  </tr>
-     <% end %>
- <% else %>
- <tr>
-   <td> <%= "There are currently no comments for that course" %>  
- </tr>
- <% end %>
+	<h4>
+	  <%= @searched_class.department %> Department<br>
+	  <%= @searched_class.units %> Units
+	</h4>
 
-</table>
+	<div id="comments">
+		<%= render '/posts/comments' %>
+	</div>
+  <%else %>
+    <h3> No posts exist for this class</h3>
+  <% end %>
 
-<%= link_to "Add New Post", new_post_path %>
+	
+
+	<div id="newpost">
+		<h4>Have you taken this course?</h4>
+		<%= render '/posts/form' %>
+	</div>
+	
+</div>
