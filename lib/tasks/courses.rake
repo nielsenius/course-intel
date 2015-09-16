@@ -42,8 +42,8 @@ namespace :courses do
   
   def write_to_db(courses)
     courses.each do |course|
-      if CollegeClass.where(number: course[0]).empty?
-        CollegeClass.create(number: course[0],
+      if CollegeClass.where(course_number: course[0]).empty?
+        CollegeClass.create(course_number: course[0],
                             name: course[1],
                             department: course[2],
                             units: course[3])
