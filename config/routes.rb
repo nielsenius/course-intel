@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   get 'login', to: 'sessions#new', as: :login
   get 'logout', to: 'sessions#destroy', as: :logout
+  get 'signup', to: 'users#new', as: :signup
   
   get 'home/index' => 'home#index', as: :home
   get 'home/submit_search' => 'home#submit_search'

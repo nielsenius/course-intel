@@ -57,6 +57,20 @@
                         </div>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div id="auth-buttons">
+                        <div id="auth-button">
+                            <% if logged_in? %>
+                                <%= link_to "Logout", logout_path, :class => "btn-default" %>
+                            <% else %>
+                                <%= link_to "Login", login_path, :class => "btn-default" %>
+                                <%= link_to "Sign Up", signup_path, :class => "btn-default" %>
+                            <% end %>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
